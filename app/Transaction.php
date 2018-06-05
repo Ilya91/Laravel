@@ -12,4 +12,20 @@ class Transaction extends Model
         'buyer_id',
         'product_id',
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function buyer()
+    {
+        return $this->belongsTo(Buyer::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
