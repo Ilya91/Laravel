@@ -36,8 +36,23 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'verification_token',
     ];
+
+    public function setNameAttribute($name):void
+    {
+        $this->attributes['name'] = strtolower($name);
+    }
+
+    public function getNameAttribute($name):void
+    {
+        $this->attributes['name'] = $name;
+    }
+
+    public function setEmailAttribute($email):void
+    {
+        $this->attributes['email'] = strtolower($email);
+    }
 
     /**
      * @return bool
