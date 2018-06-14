@@ -123,9 +123,9 @@ class UserController extends ApiController
 
         }
 
-        if(!$user->isDirty()){
+        /*if(!$user->isDirty()){
             return $this->errorResponse('Only verified users can modify the admin field', 422);
-        }
+        }*/
 
         $user->save();
 
