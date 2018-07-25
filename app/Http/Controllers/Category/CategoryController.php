@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Category;
 
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
 
@@ -14,7 +15,9 @@ class CategoryController extends ApiController
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+
+        return $this->showAll($categories);
     }
 
     /**
