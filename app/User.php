@@ -44,9 +44,13 @@ class User extends Authenticatable
         $this->attributes['name'] = strtolower($name);
     }
 
-    public function getNameAttribute($name):void
+    /**
+     * @param $name
+     * @return string
+     */
+    public function getNameAttribute(string $name) :string
     {
-        $this->attributes['name'] = $name;
+        return ucwords($name);
     }
 
     public function setEmailAttribute($email):void

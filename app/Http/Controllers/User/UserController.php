@@ -12,7 +12,7 @@ class UserController extends ApiController
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
     public function index(): JsonResponse
     {
@@ -61,8 +61,8 @@ class UserController extends ApiController
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     * @return JsonResponse
      */
     public function show($id): JsonResponse
     {
@@ -123,9 +123,9 @@ class UserController extends ApiController
 
         }
 
-        /*if(!$user->isDirty()){
+        if(!$user->isDirty()){
             return $this->errorResponse('Only verified users can modify the admin field', 422);
-        }*/
+        }
 
         $user->save();
 

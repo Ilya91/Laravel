@@ -64,3 +64,15 @@ services:
       - redis
       - blog-server
     command: 'npm start'
+
+  node:
+    image: node
+    user: "node"
+    working_dir: /var/www/laravel
+    environment:
+    - NODE_ENV=development
+    volumes:
+    - ./:/var/www/laravel
+    expose:
+    - "8081"
+    command: "npm start"
