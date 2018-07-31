@@ -18,10 +18,10 @@ class DatabaseSeeder extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
 
-        User::truncate();
-        Category::truncate();
-        Product::truncate();
-        Transaction::truncate();
+        DB::table('users')->truncate();
+        DB::table('categories')->truncate();
+        DB::table('products')->truncate();
+        DB::table('transactions')->truncate();
         DB::table('category_product')->truncate();
 
         $uq = 200;
