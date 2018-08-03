@@ -2,13 +2,18 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Scopes\SellerScope;
 
 class Seller extends User
 {
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope(new SellerScope);
+    }
+
     public function products()
     {
         return $this->hasMany(Product::class);
