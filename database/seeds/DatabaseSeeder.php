@@ -24,19 +24,20 @@ class DatabaseSeeder extends Seeder
         DB::table('transactions')->truncate();
         DB::table('category_product')->truncate();
 
-        $uq = 200;
+        $uq = 1000;
         $cq = 30;
         $pq = 1000;
         $tq = 1000;
 
         factory(User::class, $uq)->create();
         factory(Category::class, $cq)->create();
-        factory(Transaction::class, $tq)->create();
         factory(Product::class, $pq)->create()->each(
             function ($product) {
-                $categories = Category::all()->random(mt_rand(1, 5))->pluck('id');
+                $categories = Category::all()->random(rand(1, 5))->pluck('id');
 
                 $product->categories()->attach($categories);
             });
+
+        factory(Transaction::class, $tq)->create();
     }
 }
