@@ -111,8 +111,10 @@ class SellerProductController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Seller  $seller
+     * @param  \App\Seller $seller
+     * @param Product $product
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(Seller $seller, Product $product)
     {
