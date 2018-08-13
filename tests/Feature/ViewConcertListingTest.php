@@ -27,10 +27,9 @@ class ViewConcertListingTest extends TestCase
             'additional_information' => 'For tickets, call + 375 25 2345465.'
         ]);
 
-        $this->
-        $response = $this->get('/concerts/'.$concert->id);
+        $this->visit('/concerts/'.$concert->id);
         // Assert outcome obtained
-        $response->assertStatus(200);
+        //$response->assertStatus(200);
 
     }
 }
