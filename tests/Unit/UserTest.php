@@ -21,7 +21,5 @@ class UserTest extends TestCase
         $this->assertEquals($user->name, 'Billy');
 
         $this->assertInstanceOf(User::class, $user);
-
-        $this->assertClassHasAttribute('name', User::class);
     }
 }

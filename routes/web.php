@@ -18,6 +18,4 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('welcome');
 });
-Route::get('/test', function () {
-    return 'Hello World';
-});
+Route::get('/concerts/{id}', 'ConcertsController@show');
