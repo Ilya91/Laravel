@@ -150,7 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Spatie\Fractal\FractalServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         /*
          * Application Service Providers...
