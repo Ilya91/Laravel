@@ -10,6 +10,7 @@ class SellerTransformer extends TransformerAbstract
     /**
      * A Fractal transformer.
      *
+     * @param Seller $seller
      * @return array
      */
     public function transform(Seller $seller)

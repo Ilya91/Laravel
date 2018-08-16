@@ -2,10 +2,12 @@
 
 namespace App;
 
+use App\Transformers\TransactionTransformer;
 use Illuminate\Database\Eloquent\Model;
 
 class Transaction extends Model
 {
+    public $transformer = TransactionTransformer::class;
     protected $dates = ['deleted_at'];
     protected $fillable = [
         'quantity',

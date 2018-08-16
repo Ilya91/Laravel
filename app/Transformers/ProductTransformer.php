@@ -10,6 +10,7 @@ class ProductTransformer extends TransformerAbstract
     /**
      * A Fractal transformer.
      *
+     * @param Product $product
      * @return array
      */
     public function transform(Product $product)
