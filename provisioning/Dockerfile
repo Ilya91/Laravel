@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
     zip \
     jpegoptim optipng pngquant gifsicle
 
+RUN apt-get update && apt-get install -y node npm
+
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
@@ -31,3 +33,4 @@ RUN usermod -u 1000 www-data
 
 # Changing Workdir
 WORKDIR /var/www/laravel
+RUN npm install
