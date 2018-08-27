@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Jumbotron Template for Bootstrap</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css', 'build') }}" rel="stylesheet">
 
 </head>
 
@@ -90,6 +90,6 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ mix('js/app.js', 'build') }}"></script>
 </body>
 </html>
