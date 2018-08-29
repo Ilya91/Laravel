@@ -15,6 +15,11 @@ Route::get('/login', function () {
     return view('welcome');
 });
 Route::get('/concerts/{id}', 'ConcertsController@show');
+Route::get('/learn', 'LearnController@index');
+
+// Registration Routes...
+/*Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register');*/
 
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
