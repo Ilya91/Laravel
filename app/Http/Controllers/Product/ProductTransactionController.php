@@ -7,9 +7,16 @@ use App\Http\Controllers\ApiController;
 
 class ProductTransactionController extends ApiController
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     /**
      * Display a listing of the resource.
      *
+     * @param Product $product
      * @return \Illuminate\Http\Response
      */
     public function index(Product $product)

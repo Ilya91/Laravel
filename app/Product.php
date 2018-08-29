@@ -6,6 +6,9 @@ use App\Transformers\ProductTransformer;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * @property mixed transactions
+ */
 class Product extends Model
 {
     use SoftDeletes;
