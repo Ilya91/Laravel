@@ -15,7 +15,7 @@ Route::get('/login', function () {
     return view('welcome');
 });
 Route::get('/concerts/{id}', 'ConcertsController@show');
-Route::get('/learn', 'LearnController@index');
+Route::get('/learn', 'LearnController@index')->name('learn');
 
 // Registration Routes...
 /*Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');

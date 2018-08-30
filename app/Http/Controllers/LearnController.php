@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use Illuminate\Http\Request;
+use App\Category;
 
 class LearnController extends Controller
 {
     public function index()
     {
-        $users = User::all();
+        $categories = Category::all();
 
-        return $users;
+        return view('learn.learn', [
+            'categories' => $categories
+            ]
+        );
     }
 }
