@@ -2,7 +2,16 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 export default class Example extends Component {
+    getScopes() {
+        axios.get('/api/users')
+            .then(response => {
+                console.log(response);
+                this.scopes = response.data;
+            });
+    }
+
     render() {
+        let users = this.getScopes();
         return (
             <div className="container">
                 <div className="row justify-content-center">

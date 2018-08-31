@@ -24,7 +24,8 @@
         "popper.js": "^1.12",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
-        "trumbowyg": "^2.10.0"
+        "trumbowyg": "^2.10.0",
+        "vue": "2.5.16"
     },
     "dependencies": {
         "yarn": "^1.9.4"
