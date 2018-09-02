@@ -4,7 +4,6 @@ FROM php:7.2-fpm
 RUN apt-get update && apt-get install -y \
     build-essential \
     mysql-client \
-    php-xdebug \
     libpng-dev \
     libjpeg62-turbo-dev \
     libfreetype6-dev \
@@ -12,7 +11,6 @@ RUN apt-get update && apt-get install -y \
     zip \
     jpegoptim optipng pngquant gifsicle
 
-RUN apt-get update && apt-get install -y node npm
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -33,4 +31,3 @@ RUN usermod -u 1000 www-data
 
 # Changing Workdir
 WORKDIR /var/www/laravel
-RUN npm install

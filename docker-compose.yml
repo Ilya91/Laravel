@@ -66,13 +66,8 @@ services:
     command: 'npm start'
 
   node:
-    image: node
-    user: "node"
-    working_dir: /var/www/laravel
-    environment:
-    - NODE_ENV=development
+    image: node:8.6-alpine
+    working_dir: /var/www
     volumes:
-    - ./:/var/www/laravel
-    expose:
-    - "8081"
-    command: "npm start"
+      - ./:/var/www
+    tty: true
