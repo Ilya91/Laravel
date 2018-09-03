@@ -4,6 +4,9 @@ up: memory
 down:
 	docker-compose down -v
 
+enter:
+	docker-compose exec blog-server bash
+
 build: memory
 	docker-compose up --build -d
 
