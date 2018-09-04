@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Faker\Generator as Faker;
 use App\User;
 
@@ -24,5 +25,21 @@ $factory->define(User::class, function (Faker $faker) {
         'verification_token' => $verivied == User::VERIFIED_USER ? null : User::generateVerificationCode(),
         'admin' => $verivied = $faker->randomElement([User::ADMIN_USER, User::REGULAR_USER]),
 
+    ];
+});
+
+
+$factory->define(\App\Concert::class, function (Faker $faker) {
+    return [
+        'title' => 'The Red Chord',
+        'subtitle' => 'with Ann',
+        'date' => Carbon::parse('+2 weeks'),
+        'ticket_price' => 2000,
+        'venue' => 'The Mosh Pit',
+        'venue_address' => '123 Example Lane',
+        'city' => 'Minsk',
+        'state' => 'ON',
+        'zip' => '225320',
+        'additional_information' => 'For tickets, call + 375 25 2345465.'
     ];
 });
