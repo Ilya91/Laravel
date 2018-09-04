@@ -1,7 +1,7 @@
 @extends('layouts.custom')
 
 @section('content')
-<div class="container"  style="margin-bottom: 200px">
+<div class="container">
     <div class="row">
         <div class="col-md-8">
             <ul class="list-group">

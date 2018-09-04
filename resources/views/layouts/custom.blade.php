@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -30,6 +29,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('learn') }}">{{ __('Learn') }}</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -46,11 +48,8 @@
     </div>
 </nav>
 
-<main role="main">
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-    </div>
-    {{ Breadcrumbs::render('learn') }}
+<main role="main" style="padding-top: 80px">
+    @include('components.breadcrumbs')
     @yield('content')
 </main>
 
