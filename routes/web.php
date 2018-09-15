@@ -41,3 +41,10 @@ Route::get('/home', 'HomeController@index');
 Route::get('/', function() {
     return view('welcome');
 })->middleware('guest')->name('home');
+
+Route::get('/redis', function() {
+    var_dump(app()->make('redis'));
+})->name('redis');
+
+Route::get('/blog', 'Blog\BlogController@index')->name('blog');
+Route::get('/blog/article/{id}', 'Blog\BlogController@article')->name('article');
