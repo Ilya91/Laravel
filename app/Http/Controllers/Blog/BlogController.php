@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Blog;
 use App\Category;
 use App\Http\Controllers\Controller;
 use Redis;
+use DB;
 
 class BlogController extends Controller
 {
@@ -38,5 +39,24 @@ class BlogController extends Controller
 
         $views = $storage->get('article:' . $id. ':views');
         return 'This article with id: ' . $id . ' with views: ' . $views;
+    }
+
+    public function categories()
+    {
+        DB::connection()->enableQueryLog();
+        $res = \Cache::remember('blog_categories', 1, function (){
+            return Category::where('id', '>', 22)
+                ->orderBy('name')
+                ->get();
+        });
+
+        $log = DB::getQueryLog();
+        dump($log);
+        dump($res);
+    }
+
+    public function tag()
+    {
+        dump('hello');
     }
 }

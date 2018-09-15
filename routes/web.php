@@ -48,3 +48,9 @@ Route::get('/redis', function() {
 
 Route::get('/blog', 'Blog\BlogController@index')->name('blog');
 Route::get('/blog/article/{id}', 'Blog\BlogController@article')->name('article');
+Route::get('/blog/categories', 'Blog\BlogController@categories')->name('categories');
+Route::get('/blog/tag/{tag}', 'Blog\BlogController@tag')->name('tag');
+
+Route::get('/publish', function() {
+    Redis::publish('channel', json_encode(['foo' => 'bar']));
+});
