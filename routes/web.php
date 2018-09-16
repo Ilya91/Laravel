@@ -39,6 +39,7 @@ Route::get('/home/my-tokens', 'HomeController@getTokens')->name('personal-tokens
 Route::get('/home', 'HomeController@index');
 
 Route::get('/', function() {
+    \App\Jobs\ProcessPodcast::dispatch('test')->delay(now()->addMinutes(1));
     return view('welcome');
 })->middleware('guest')->name('home');
 
