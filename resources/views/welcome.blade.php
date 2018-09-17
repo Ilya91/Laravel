@@ -85,7 +85,10 @@
     </div> <!-- /container -->
 
 </main>
-<div id="example"></div>
+<div id="app">
+    <example-component></example-component>
+</div>
+
 <footer class="container">
     <p>&copy; Company 2017-2018</p>
 </footer>

@@ -1,19 +1,18 @@
 @extends('layouts.custom')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <ul class="list-group">
-                <a href="#" class="list-group-item active">
-                    Categories
-                </a>
-                @foreach($categories as $category)
-                    <a href="#" class="list-group-item">{{ $category->name }}</a>
-                @endforeach
-
-            </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <prop-component :urldata="{{ $categories }}"></prop-component>
+            </div>
         </div>
     </div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <ajax-component></ajax-component>
+            </div>
+        </div>
+    </div>
 @endsection

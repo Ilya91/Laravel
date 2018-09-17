@@ -55,3 +55,12 @@ Route::get('/blog/tag/{tag}', 'Blog\BlogController@tag')->name('tag');
 Route::get('/publish', function() {
     Redis::publish('channel', json_encode(['foo' => 'bar']));
 });
+
+
+/* realtime application */
+Route::get('/realtime', 'Realtime\RealtimeController@index')->name('realtime');
+Route::get('/realtime/ajax-categories', 'Realtime\RealtimeController@ajaxCategories')->name('ajax-categories');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -27,9 +27,6 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="{{ route('learn') }}">{{ __('Learn') }}</a>
             </li>
             <li class="nav-item dropdown">
@@ -40,6 +37,15 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('realtime') }}">{{ __('Realtime') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -48,7 +54,7 @@
     </div>
 </nav>
 
-<main role="main" style="padding-top: 80px">
+<main role="main" style="padding-top: 80px" id="app">
     @include('components.breadcrumbs')
     @yield('content')
 </main>

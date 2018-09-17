@@ -11,14 +11,14 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ mix('/js/app.js', 'build') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ mix('/css/app.css', 'build') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -33,12 +33,8 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        @if (Auth::check())
-                            <li><a href="{{route('personal-tokens')}}">My Tokens</a></li>
-                            <li><a href="{{route('personal-clients')}}">My Clients</a></li>
-                            <li><a href="{{route('authorized-clients')}}">Authorized Clients</a></li>
-                        @endif
+                    <ul class="navbar-nav mr-auto">
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -49,7 +45,7 @@
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             <li class="nav-item">
-                                {{--<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
