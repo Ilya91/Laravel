@@ -14,5 +14,8 @@
                 <ajax-component></ajax-component>
             </div>
         </div>
+        <div class="row">
+            <div id="example"></div>
+        </div>
     </div>
 @endsection

@@ -15,8 +15,12 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('prop-component', require('./components/PropComponent.vue'));
-Vue.component('ajax-component', require('./components/AjaxComponent.vue'));
+
+import Prop from './components/PropComponent.vue';
+Vue.component('prop-component', Prop);
+
+import Ajax from './components/AjaxComponent.vue';
+Vue.component('ajax-component', Ajax);
 
 const app = new Vue({
     el: '#app'

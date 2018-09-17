@@ -67,5 +67,6 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="{{ mix('js/app.js', 'build') }}"></script>
+{{--<script src="{{ mix('react/app.js', 'build') }}"></script>--}}
 </body>
 </html>
