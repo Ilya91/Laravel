@@ -22,6 +22,15 @@ Vue.component('prop-component', Prop);
 import Ajax from './components/AjaxComponent.vue';
 Vue.component('ajax-component', Ajax);
 
+import ChartLine from './components/ChartLineComponent.vue';
+Vue.component('chartline-component', ChartLine);
+
+import Pie from './components/PieComponent.vue';
+Vue.component('pie-component', Pie);
+
+import Random from './components/ChartRandomComponent.vue';
+Vue.component('random-component', Random);
+
 const app = new Vue({
     el: '#app'
 });

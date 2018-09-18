@@ -58,8 +58,14 @@ Route::get('/publish', function() {
 
 
 /* realtime application */
-Route::get('/realtime', 'Realtime\RealtimeController@index')->name('realtime');
+Route::get('/realtime', 'Realtime\RealtimeController@realtime')->name('realtime');
+Route::get('/realtime/chart', 'Realtime\RealtimeController@chart')->name('chart');
+Route::get('/realtime/pie-chart', 'Realtime\RealtimeController@pieChart')->name('pie-chart');
+Route::get('/realtime/template', 'Realtime\RealtimeController@template')->name('template');
+Route::get('/realtime/ajax', 'Realtime\RealtimeController@ajax')->name('ajax');
 Route::get('/realtime/ajax-categories', 'Realtime\RealtimeController@ajaxCategories')->name('ajax-categories');
+Route::get('/realtime/chart-data', 'Realtime\RealtimeController@chartData')->name('chart-data');
+Route::get('/realtime/random-data', 'Realtime\RealtimeController@randomData')->name('random-data');
 
 Auth::routes();
 

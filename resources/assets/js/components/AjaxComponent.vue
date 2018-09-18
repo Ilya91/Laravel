@@ -26,7 +26,7 @@
         methods: {
             update: function () {
                 this.is_refresh = true
-                axios.get('realtime/ajax-categories').then((response) => {
+                axios.get('/realtime/ajax-categories').then((response) => {
                     console.log(response)
                     this.urldata = response.data
                     this.is_refresh = false

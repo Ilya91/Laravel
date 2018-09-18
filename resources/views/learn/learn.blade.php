@@ -15,6 +15,9 @@
             </div>
         </div>
         <div class="row">
+            <chartline-component></chartline-component>
+        </div>
+        <div class="row">
             <div id="example"></div>
         </div>
     </div>

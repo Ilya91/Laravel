@@ -24,6 +24,26 @@ Breadcrumbs::for('realtime', function ($trail) {
     $trail->push('Realtime', route('realtime'));
 });
 
+Breadcrumbs::for('template', function ($trail) {
+    $trail->parent('realtime', route('realtime'));
+    $trail->push('Template', route('template'));
+});
+
+Breadcrumbs::for('ajax', function ($trail) {
+    $trail->parent('realtime', route('realtime'));
+    $trail->push('Ajax', route('ajax'));
+});
+
+Breadcrumbs::for('chart', function ($trail) {
+    $trail->parent('realtime', route('realtime'));
+    $trail->push('Chart', route('chart'));
+});
+
+Breadcrumbs::for('pie-chart', function ($trail) {
+    $trail->parent('realtime', route('realtime'));
+    $trail->push('Pie Chart', route('pie-chart'));
+});
+
 Breadcrumbs::for('blog', function ($trail) {
     $trail->parent('home', route('home'));
     $trail->push('Blog', route('blog'));

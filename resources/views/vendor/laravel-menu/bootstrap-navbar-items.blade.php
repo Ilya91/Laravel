@@ -8,10 +8,10 @@
       {!! $item->title !!}
     @endif
     @if($item->hasChildren())
-      <ul class="dropdown-menu">
+      <div class="dropdown-menu"  aria-labelledby="dropdown01">
         @include(config('laravel-menu.views.bootstrap-items'), 
 array('items' => $item->children()))
-      </ul> 
+      </div>
     @endif
   </li>
   @if($item->divider)
