@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-09-16 14:34:12.
+    * Generated on 2018-09-18 08:23:59.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -59,8 +59,6 @@ namespace PHPSTORM_META {
         'Laravel\Horizon\Contracts\SupervisorRepository' => \Laravel\Horizon\Repositories\RedisSupervisorRepository::class,
         'Laravel\Horizon\Contracts\TagRepository' => \Laravel\Horizon\Repositories\RedisTagRepository::class,
         'Laravel\Horizon\Contracts\WorkloadRepository' => \Laravel\Horizon\Repositories\RedisWorkloadRepository::class,
-        'League\OAuth2\Server\AuthorizationServer' => \League\OAuth2\Server\AuthorizationServer::class,
-        'League\OAuth2\Server\ResourceServer' => \League\OAuth2\Server\ResourceServer::class,
         'fractal' => \Spatie\Fractal\Fractal::class,
         'dateCheck' => \App\Services\DateCheck::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -167,6 +165,7 @@ namespace PHPSTORM_META {
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
+        'Lavary\Menu\Menu' => \Lavary\Menu\Menu::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
     ]));
@@ -221,8 +220,6 @@ namespace PHPSTORM_META {
         'Laravel\Horizon\Contracts\SupervisorRepository' => \Laravel\Horizon\Repositories\RedisSupervisorRepository::class,
         'Laravel\Horizon\Contracts\TagRepository' => \Laravel\Horizon\Repositories\RedisTagRepository::class,
         'Laravel\Horizon\Contracts\WorkloadRepository' => \Laravel\Horizon\Repositories\RedisWorkloadRepository::class,
-        'League\OAuth2\Server\AuthorizationServer' => \League\OAuth2\Server\AuthorizationServer::class,
-        'League\OAuth2\Server\ResourceServer' => \League\OAuth2\Server\ResourceServer::class,
         'fractal' => \Spatie\Fractal\Fractal::class,
         'dateCheck' => \App\Services\DateCheck::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -329,6 +326,7 @@ namespace PHPSTORM_META {
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
+        'Lavary\Menu\Menu' => \Lavary\Menu\Menu::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
     ]));
@@ -383,8 +381,6 @@ namespace PHPSTORM_META {
         'Laravel\Horizon\Contracts\SupervisorRepository' => \Laravel\Horizon\Repositories\RedisSupervisorRepository::class,
         'Laravel\Horizon\Contracts\TagRepository' => \Laravel\Horizon\Repositories\RedisTagRepository::class,
         'Laravel\Horizon\Contracts\WorkloadRepository' => \Laravel\Horizon\Repositories\RedisWorkloadRepository::class,
-        'League\OAuth2\Server\AuthorizationServer' => \League\OAuth2\Server\AuthorizationServer::class,
-        'League\OAuth2\Server\ResourceServer' => \League\OAuth2\Server\ResourceServer::class,
         'fractal' => \Spatie\Fractal\Fractal::class,
         'dateCheck' => \App\Services\DateCheck::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -491,6 +487,7 @@ namespace PHPSTORM_META {
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
+        'Lavary\Menu\Menu' => \Lavary\Menu\Menu::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
     ]));
@@ -545,8 +542,6 @@ namespace PHPSTORM_META {
         'Laravel\Horizon\Contracts\SupervisorRepository' => \Laravel\Horizon\Repositories\RedisSupervisorRepository::class,
         'Laravel\Horizon\Contracts\TagRepository' => \Laravel\Horizon\Repositories\RedisTagRepository::class,
         'Laravel\Horizon\Contracts\WorkloadRepository' => \Laravel\Horizon\Repositories\RedisWorkloadRepository::class,
-        'League\OAuth2\Server\AuthorizationServer' => \League\OAuth2\Server\AuthorizationServer::class,
-        'League\OAuth2\Server\ResourceServer' => \League\OAuth2\Server\ResourceServer::class,
         'fractal' => \Spatie\Fractal\Fractal::class,
         'dateCheck' => \App\Services\DateCheck::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -653,6 +648,7 @@ namespace PHPSTORM_META {
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
+        'Lavary\Menu\Menu' => \Lavary\Menu\Menu::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
     ]));
@@ -707,8 +703,6 @@ namespace PHPSTORM_META {
         'Laravel\Horizon\Contracts\SupervisorRepository' => \Laravel\Horizon\Repositories\RedisSupervisorRepository::class,
         'Laravel\Horizon\Contracts\TagRepository' => \Laravel\Horizon\Repositories\RedisTagRepository::class,
         'Laravel\Horizon\Contracts\WorkloadRepository' => \Laravel\Horizon\Repositories\RedisWorkloadRepository::class,
-        'League\OAuth2\Server\AuthorizationServer' => \League\OAuth2\Server\AuthorizationServer::class,
-        'League\OAuth2\Server\ResourceServer' => \League\OAuth2\Server\ResourceServer::class,
         'fractal' => \Spatie\Fractal\Fractal::class,
         'dateCheck' => \App\Services\DateCheck::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -815,6 +809,7 @@ namespace PHPSTORM_META {
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
+        'Lavary\Menu\Menu' => \Lavary\Menu\Menu::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
     ]));
@@ -869,8 +864,6 @@ namespace PHPSTORM_META {
         'Laravel\Horizon\Contracts\SupervisorRepository' => \Laravel\Horizon\Repositories\RedisSupervisorRepository::class,
         'Laravel\Horizon\Contracts\TagRepository' => \Laravel\Horizon\Repositories\RedisTagRepository::class,
         'Laravel\Horizon\Contracts\WorkloadRepository' => \Laravel\Horizon\Repositories\RedisWorkloadRepository::class,
-        'League\OAuth2\Server\AuthorizationServer' => \League\OAuth2\Server\AuthorizationServer::class,
-        'League\OAuth2\Server\ResourceServer' => \League\OAuth2\Server\ResourceServer::class,
         'fractal' => \Spatie\Fractal\Fractal::class,
         'dateCheck' => \App\Services\DateCheck::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -977,6 +970,7 @@ namespace PHPSTORM_META {
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
+        'Lavary\Menu\Menu' => \Lavary\Menu\Menu::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
     ]));
@@ -1031,8 +1025,6 @@ namespace PHPSTORM_META {
         'Laravel\Horizon\Contracts\SupervisorRepository' => \Laravel\Horizon\Repositories\RedisSupervisorRepository::class,
         'Laravel\Horizon\Contracts\TagRepository' => \Laravel\Horizon\Repositories\RedisTagRepository::class,
         'Laravel\Horizon\Contracts\WorkloadRepository' => \Laravel\Horizon\Repositories\RedisWorkloadRepository::class,
-        'League\OAuth2\Server\AuthorizationServer' => \League\OAuth2\Server\AuthorizationServer::class,
-        'League\OAuth2\Server\ResourceServer' => \League\OAuth2\Server\ResourceServer::class,
         'fractal' => \Spatie\Fractal\Fractal::class,
         'dateCheck' => \App\Services\DateCheck::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
@@ -1139,6 +1131,7 @@ namespace PHPSTORM_META {
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsManager' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
         'DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator' => \DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
         'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
+        'Lavary\Menu\Menu' => \Lavary\Menu\Menu::class,
         'NunoMaduro\Collision\Contracts\Adapters\Phpunit\Listener' => \NunoMaduro\Collision\Adapters\Phpunit\Listener::class,
         'NunoMaduro\Collision\Contracts\Provider' => \NunoMaduro\Collision\Provider::class,
     ]));

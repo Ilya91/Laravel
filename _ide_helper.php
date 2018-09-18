@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.33 on 2018-09-16 14:34:11.
+ * Generated for Laravel 5.6.33 on 2018-09-18 08:23:59.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -2974,19 +2974,6 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
-         * Get a lock instance.
-         *
-         * @param string $name
-         * @param int $seconds
-         * @return \Illuminate\Contracts\Cache\Lock 
-         * @static 
-         */ 
-        public static function lock($name, $seconds = 0)
-        {
-            return \Illuminate\Cache\RedisStore::lock($name, $seconds);
-        }
-        
-        /**
          * Remove all items from the cache.
          *
          * @return bool 
@@ -2994,41 +2981,29 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function flush()
         {
-            return \Illuminate\Cache\RedisStore::flush();
+            return \Illuminate\Cache\FileStore::flush();
         }
         
         /**
-         * Get the Redis connection instance.
+         * Get the Filesystem instance.
          *
-         * @return \Predis\ClientInterface 
+         * @return \Illuminate\Filesystem\Filesystem 
          * @static 
          */ 
-        public static function connection()
+        public static function getFilesystem()
         {
-            return \Illuminate\Cache\RedisStore::connection();
+            return \Illuminate\Cache\FileStore::getFilesystem();
         }
         
         /**
-         * Set the connection name to be used.
+         * Get the working directory of the cache.
          *
-         * @param string $connection
-         * @return void 
+         * @return string 
          * @static 
          */ 
-        public static function setConnection($connection)
+        public static function getDirectory()
         {
-            \Illuminate\Cache\RedisStore::setConnection($connection);
-        }
-        
-        /**
-         * Get the Redis database instance.
-         *
-         * @return \Illuminate\Contracts\Redis\Factory 
-         * @static 
-         */ 
-        public static function getRedis()
-        {
-            return \Illuminate\Cache\RedisStore::getRedis();
+            return \Illuminate\Cache\FileStore::getDirectory();
         }
         
         /**
@@ -3039,19 +3014,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getPrefix()
         {
-            return \Illuminate\Cache\RedisStore::getPrefix();
-        }
-        
-        /**
-         * Set the cache key prefix.
-         *
-         * @param string $prefix
-         * @return void 
-         * @static 
-         */ 
-        public static function setPrefix($prefix)
-        {
-            \Illuminate\Cache\RedisStore::setPrefix($prefix);
+            return \Illuminate\Cache\FileStore::getPrefix();
         }
          
     }
@@ -13557,6 +13520,98 @@ namespace Laravel\Horizon {
  
 }
 
+namespace Lavary\Menu { 
+
+    class Facade {
+        
+        /**
+         * Check if a menu exists.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function exists($name)
+        {
+            return \Lavary\Menu\Menu::exists($name);
+        }
+        
+        /**
+         * Create a new menu instance.
+         *
+         * @param string $name
+         * @param callable $callback
+         * @return \Menu 
+         * @static 
+         */ 
+        public static function makeOnce($name, $callback)
+        {
+            return \Lavary\Menu\Menu::makeOnce($name, $callback);
+        }
+        
+        /**
+         * Create a new menu instance.
+         *
+         * @param string $name
+         * @param callable $callback
+         * @return \Menu 
+         * @static 
+         */ 
+        public static function make($name, $callback)
+        {
+            return \Lavary\Menu\Menu::make($name, $callback);
+        }
+        
+        /**
+         * Loads and merges configuration data.
+         *
+         * @param string $name
+         * @return array 
+         * @static 
+         */ 
+        public static function loadConf($name)
+        {
+            return \Lavary\Menu\Menu::loadConf($name);
+        }
+        
+        /**
+         * Return Menu instance from the collection by key.
+         *
+         * @param string $key
+         * @return \Lavary\Menu\Item 
+         * @static 
+         */ 
+        public static function get($key)
+        {
+            return \Lavary\Menu\Menu::get($key);
+        }
+        
+        /**
+         * Return Menu collection.
+         *
+         * @return \Illuminate\Support\Collection 
+         * @static 
+         */ 
+        public static function getCollection()
+        {
+            return \Lavary\Menu\Menu::getCollection();
+        }
+        
+        /**
+         * Alias for getCollection.
+         *
+         * @return \Illuminate\Support\Collection 
+         * @static 
+         */ 
+        public static function all()
+        {
+            return \Lavary\Menu\Menu::all();
+        }
+         
+    }
+ 
+}
+
 namespace Spatie\Fractal { 
 
     class FractalFacade {
@@ -16266,6 +16321,8 @@ namespace  {
     class Flash extends \Laracasts\Flash\Flash {}
 
     class Horizon extends \Laravel\Horizon\Horizon {}
+
+    class Menu extends \Lavary\Menu\Facade {}
 
     class Fractal extends \Spatie\Fractal\FractalFacade {}
  

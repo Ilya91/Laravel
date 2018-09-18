@@ -15,7 +15,7 @@ class LearnController extends Controller
             ->get();
 
         $redis = Redis::connection();
-        dump($redis->get('key1'));
+        //dump($redis->get('key1'));
         return view('learn.learn', [
             'categories' => $categories
             ]

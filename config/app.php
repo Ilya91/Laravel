@@ -153,6 +153,7 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         Spatie\Fractal\FractalServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Lavary\Menu\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -213,6 +214,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'DateService' => \App\Facades\DateService::class,
+        'Menu'      => Lavary\Menu\Facade::class,
     ],
 
 ];
