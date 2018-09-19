@@ -44,6 +44,11 @@ Breadcrumbs::for('pie-chart', function ($trail) {
     $trail->push('Pie Chart', route('pie-chart'));
 });
 
+Breadcrumbs::for('socket-chart', function ($trail) {
+    $trail->parent('realtime', route('realtime'));
+    $trail->push('Socket Chart', route('socket-chart'));
+});
+
 Breadcrumbs::for('blog', function ($trail) {
     $trail->parent('home', route('home'));
     $trail->push('Blog', route('blog'));

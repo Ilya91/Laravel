@@ -53,21 +53,23 @@ services:
     ports:
       - "6378:6379"
 
-  echo-server:
-    image: node
-    ports:
-      - "8888:8888"
-    working_dir: /var/www/laravel
-    volumes:
-      - .:/var/www/laravel:cached
-    depends_on:
-      - redis
-      - blog-server
-    command: 'npm start'
+#  echo-server:
+#    image: node
+#    ports:
+#      - "8888:8888"
+#    working_dir: /var/www/laravel
+#    volumes:
+#      - .:/var/www/laravel:cached
+#    depends_on:
+#      - redis
+#      - blog-server
+#    command: 'npm start'
 
   node:
     image: node:10.10.0-alpine
-    working_dir: /var/www
+    ports:
+    - "3001:3000"
     volumes:
-      - ./:/var/www
+    - ./:/var/www
+    working_dir: /var/www
     tty: true

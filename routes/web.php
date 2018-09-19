@@ -66,6 +66,8 @@ Route::get('/realtime/ajax', 'Realtime\RealtimeController@ajax')->name('ajax');
 Route::get('/realtime/ajax-categories', 'Realtime\RealtimeController@ajaxCategories')->name('ajax-categories');
 Route::get('/realtime/chart-data', 'Realtime\RealtimeController@chartData')->name('chart-data');
 Route::get('/realtime/random-data', 'Realtime\RealtimeController@randomData')->name('random-data');
+Route::get('/realtime/new-event', 'Realtime\RealtimeController@newEvent')->name('new-event');
+Route::get('/realtime/socket-chart', 'Realtime\RealtimeController@socketChart')->name('socket-chart');
 
 Auth::routes();
 

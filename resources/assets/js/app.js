@@ -31,6 +31,9 @@ Vue.component('pie-component', Pie);
 import Random from './components/ChartRandomComponent.vue';
 Vue.component('random-component', Random);
 
+import Socket from './components/SocketComponent.vue';
+Vue.component('socket-component', Socket);
+
 const app = new Vue({
     el: '#app'
 });
