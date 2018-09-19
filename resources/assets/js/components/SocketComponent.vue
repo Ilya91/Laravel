@@ -27,7 +27,7 @@
             }
         },
         mounted() {
-            var socket = io('http://0.0.0.0:3001');
+            var socket = io('http://localhost:3000');
             socket.on('news-action:App\\Events\\NewEvent', function () {
                 this.data = data.result;
             }.bind(this));
