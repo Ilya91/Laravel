@@ -27,8 +27,9 @@
             }
         },
         mounted() {
-            var socket = io('http://localhost:3000');
-            socket.on('news-action:App\\Events\\NewEvent', function () {
+            var socket = io('http://127.0.0.1:3000');
+            var app = this;
+            socket.on('news-action:App\\Events\\NewEvent', function (data) {
                 this.data = data.result;
             }.bind(this));
         },
