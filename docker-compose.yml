@@ -53,15 +53,15 @@ services:
     ports:
       - "6378:6379"
 
-  node:
-    image: node:10.10.0-alpine
-    ports:
-    - "3001:3000"
-    volumes:
-    - ./:/var/www
-    working_dir: /var/www
-    command: "node server.js"
-    tty: true
+#  node:
+#    image: node:10.10.0-alpine
+#    ports:
+#    - "3001:3000"
+#    volumes:
+#    - ./:/var/www
+#    working_dir: /var/www
+#    command: "node server.js"
+#    tty: true
 
   echo-server:
       image: node
