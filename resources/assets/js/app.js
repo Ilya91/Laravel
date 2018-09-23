@@ -34,6 +34,9 @@ Vue.component('random-component', Random);
 import Socket from './components/SocketComponent.vue';
 Vue.component('socket-component', Socket);
 
+import SocketChat from './components/SocketChatComponent.vue';
+Vue.component('chat-component', SocketChat);
+
 const app = new Vue({
     el: '#app'
 });

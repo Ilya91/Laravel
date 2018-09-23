@@ -62,3 +62,15 @@ services:
     working_dir: /var/www
     command: "node server.js"
     tty: true
+
+  echo-server:
+      image: node
+      ports:
+        - "8888:8888"
+      working_dir: /var/www/laravel
+      volumes:
+        - .:/var/www/laravel:cached
+      depends_on:
+        - redis
+        - blog-server
+      command: 'npm start'

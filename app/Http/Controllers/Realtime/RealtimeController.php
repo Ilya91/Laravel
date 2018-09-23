@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Realtime;
 use App\Category;
 use App\Concert;
 use App\Events\NewEvent;
+use App\Events\NewMessage;
 use App\Http\Controllers\Controller;
 use App\Traits\ApiResponser;
 use Illuminate\Http\Request;
@@ -46,6 +47,11 @@ class RealtimeController extends Controller
     public function socketChart()
     {
         return view('realtime.socket-chart');
+    }
+
+    public function chat()
+    {
+        return view('realtime.chat');
     }
 
     public function newEvent(Request $request)
@@ -110,5 +116,10 @@ class RealtimeController extends Controller
                 ],
             ]
         ];
+    }
+
+    public function sendMessage(Request $request)
+    {
+        event(new NewMessage($request->input('message')));
     }
 }

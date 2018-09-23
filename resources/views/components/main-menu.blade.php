@@ -19,6 +19,7 @@
                     <a class="dropdown-item {{ \App\Services\Active::check('realtime/ajax') }}" href="{{ route('ajax') }}">Vue Ajax method</a>
                     <a class="dropdown-item {{ \App\Services\Active::check('realtime/chart') }}" href="{{ route('chart') }}">Vue Chart Line</a>
                     <a class="dropdown-item {{ \App\Services\Active::check('realtime/pie-chart') }}" href="{{ route('pie-chart') }}">Pie Chart</a>
+                    <a class="dropdown-item {{ \App\Services\Active::check('realtime/chat') }}" href="{{ route('chat') }}">Chat</a>
                 </div>
             </li>
             <li class="nav-item {{ \App\Services\Active::check('login') }}">
