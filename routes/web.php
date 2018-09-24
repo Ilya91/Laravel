@@ -70,7 +70,7 @@ Route::get('/realtime/new-event', 'Realtime\RealtimeController@newEvent')->name(
 Route::get('/realtime/socket-chart', 'Realtime\RealtimeController@socketChart')->name('socket-chart');
 Route::get('/realtime/chat', 'Realtime\RealtimeController@chat')->name('chat');
 Route::get('/realtime/send-message', 'Realtime\RealtimeController@sendMessage')->name('send-message');
-Route::post('messages', function (Illuminate\Http\Request $request){
+Route::post('/messages', function (Illuminate\Http\Request $request){
     \App\Events\NewMessage::dispatch($request->input('body'));
 });
 
